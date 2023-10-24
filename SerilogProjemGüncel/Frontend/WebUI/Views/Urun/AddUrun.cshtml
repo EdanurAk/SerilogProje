@@ -1,0 +1,19 @@
+﻿@model AddUrunViewModel
+@{
+    ViewData["Title"] = "AddUrun";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <label>Ürün Adı</label>
+    <input type="text" asp-for="UrunAd" class="form-control" />
+    <br />
+    <label> Marka</label>
+    <input type="text" asp-for="Marka" class="form-control" />
+    <br />
+    <label>Stok</label>
+    <input type="text" asp-for="Stok" class="form-control" />
+    <br />
+    <button class="btn btn-outline-success">Ürün Ekle</button>
+</form>
+

@@ -1,0 +1,29 @@
+﻿@model List<UrunViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Urun Ad</th>
+        <th>Marka</th>
+        <th>Stok</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Urunid</td>
+            <td>@item.UrunAd</td>
+            <td>@item.Marka</td>
+            <td>@item.Stok</td>
+            <td><a href="/Urun/DeleteUrun/@item.Urunid" class="btn mb-1 btn-rounded btn-outline-danger">Sil</a></td>
+            <td><a href="/Urun/UpdateUrun/@item.Urunid" class="btn mb-1 btn-rounded btn-outline-success">Güncelle</a></td>
+        </tr>
+    }
+
+</table>
+<a href="/Urun/AddUrun/" class="btn mb-1 btn-rounded btn-outline-info">Yeni Ürün</a>
