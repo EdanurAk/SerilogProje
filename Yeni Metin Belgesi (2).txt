@@ -1,0 +1,8 @@
+urun.Marka='Arçelik' and urun.Urunid=3
+@Level='Error'
+urun.Marka like 'Ar%'ci
+@Level='Error' or @Level='information' ci
+urun.Marka is not null------urun.Marka =null
+employee[?].LastName = 'Mutlu'//bir dizi içerisinde LastName Mutlu olanı getirir
+employee.LastName='Mutlu'//Tek bir satır üzerindeki işlemlere erişimde kullanılır.
+
